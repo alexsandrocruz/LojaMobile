@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.Views.MenuListPage"
+             Title="Menu"
+             BackgroundColor="{StaticResource corFundo}">
+  <StackLayout>
+    <ListView x:Name="lstMenu"
+              ItemsSource="{Binding ListaMenu}" 
+              SeparatorVisibility="None">
+    </ListView>
+    <StackLayout VerticalOptions="End" Padding="20">
+      <Label Text="Sair">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding Sair}"></TapGestureRecognizer>
+        </Label.GestureRecognizers>
+      </Label>
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

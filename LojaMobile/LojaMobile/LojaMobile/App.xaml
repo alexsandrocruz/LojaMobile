@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <Color x:Key="corBotao">#8BBEB2</Color>
+      <Color x:Key="corLabel">#FFFFFF</Color>
+      <Color x:Key="corFundo">#18314F</Color>
+      <Color x:Key="corPrimaria">#0D0630</Color>
+      <Color x:Key="corSecundaria">#384E77</Color>
+      <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource corBotao}"></Setter>
+        <Setter Property="BorderRadius" Value="20"></Setter>
+      </Style>
+      <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource corLabel}"></Setter>
+      </Style>
+      <Style TargetType="ListView">
+        <Setter Property="TextCell.TextColor" Value="{StaticResource corLabel}"></Setter>
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

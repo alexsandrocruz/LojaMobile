@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctx="clr-namespace:LojaMobile.Views.Controls;assembly=LojaMobile"
+             x:Class="LojaMobile.Views.VendaPage"
+             BackgroundColor="{StaticResource corFundo}">
+  <StackLayout>
+    <ctx:BindablePicker x:Name="pckEstoque"
+                        Title="Produto"
+                        ItemsSource="{Binding Estoques, Mode=TwoWay}"
+                        SelectedItem="{Binding NomeEstoque}"
+                        SelectedIndex="{Binding EstoqueIndex}"></ctx:BindablePicker>
+    <ctx:BindablePicker x:Name="pckCliente"
+                        Title="Cliente"
+                        ItemsSource="{Binding Clientes, Mode=TwoWay}"
+                        SelectedItem="{Binding NomeCliente}"
+                        SelectedIndex="{Binding ClienteIndex}">
+    </ctx:BindablePicker>
+    <Label Text=""
+           FontAttributes="Bold"
+           FontSize="24"></Label>
+    <Button Text="Vender" Command="{Binding Vender}"></Button>
+  </StackLayout>
+</ContentPage>

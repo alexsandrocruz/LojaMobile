@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ctx="clr-namespace:LojaMobile.Views.Controls;assembly=LojaMobile"
+             x:Class="LojaMobile.Views.CadastroEstoquePage"
+             BackgroundColor="{StaticResource corFundo}">
+  <StackLayout>
+    <Entry Placeholder="Nome" Text="{Binding Nome}"></Entry>
+    <ctx:BindablePicker  Title="Grupo" 
+                         ItemsSource="{Binding ListaGrupos}" 
+                         SelectedItem="{Binding Grupo, Mode=TwoWay}"></ctx:BindablePicker>
+    <Entry Placeholder="Valor" Keyboard="Numeric" Text="{Binding Valor}"></Entry>
+    <Button  Text="Carregar" Command="{Binding Salvar}"></Button>
+  </StackLayout>
+</ContentPage>

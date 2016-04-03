@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.Views.DashboardPage"
+             BackgroundColor="{StaticResource corFundo}">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition></RowDefinition>
+      <RowDefinition></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Frame Grid.Row="0" BackgroundColor="{StaticResource corPrimaria}">
+      <StackLayout>
+        <Label Text="Valor em Vendas"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"></Label>
+        <Label Text="{Binding TotalVendas, StringFormat='R$ {0:N2}'}"
+             HorizontalOptions="End"
+             VerticalOptions="End"></Label>
+      </StackLayout>
+    </Frame>
+
+    <Frame Grid.Row="1" BackgroundColor="{StaticResource corSecundaria}">
+      <StackLayout>
+        <Label Text="Quantidade de vendas"
+               TextColor="White"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"></Label>
+        <Label Text="{Binding QuantidadeVendas}"
+             HorizontalOptions="End"
+             VerticalOptions="End"></Label>
+      </StackLayout>
+    </Frame>
+  </Grid>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:LojaMobile.Views.Controls;assembly=LojaMobile"
+             x:Class="LojaMobile.Views.RegistroPage"
+             BackgroundColor="{StaticResource corFundo}">
+  <StackLayout>
+    <Entry Placeholder="Usuário" 
+           Text="{Binding Nome}"></Entry>
+    <Entry Placeholder="Senha" 
+           IsPassword="{Binding IsPassword}" 
+           Text="{Binding Senha}"></Entry>
+    <Label Text="Mostrar senha"/>
+    <Switch IsToggled="{Binding MostrarSenha}"></Switch>
+    <Label Text="Data de Nascimento"/>
+    <DatePicker Date="{Binding DataNascimento}"
+                MaximumDate="{Binding DataMaxima}"
+                MinimumDate="{Binding DataMinima}"></DatePicker>
+    <Entry Placeholder="Celular" 
+           Keyboard="Telephone"
+           Text="{Binding Celular}"></Entry>
+    <controls:BindablePicker Title="Estado" 
+                             ItemsSource="{Binding ListaEstado}"
+                             SelectedItem="{Binding Estado, Mode=TwoWay}"/>
+    <Button Text="Registrar" 
+            Command="{Binding Registrar}"></Button>
+  </StackLayout>
+</ContentPage>

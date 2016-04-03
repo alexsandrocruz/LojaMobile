@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.Views.ChatPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="9*"></RowDefinition>
+      <RowDefinition Height="1*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="8*"></ColumnDefinition>
+      <ColumnDefinition Width="2*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    
+    <ListView ItemsSource="{Binding ListaMensagens}"
+              Grid.Row="0"
+              Grid.ColumnSpan="2"></ListView>
+    <Entry Grid.Row="1"
+           Grid.Column="0"
+           Text="{Binding Mensagem}"
+           Placeholder="Mensagem"></Entry>
+    <Button Grid.Row="1"
+            Grid.Column="1"
+            Command="{Binding Enviar}"
+            Text="Enviar"></Button>
+  </Grid>
+</ContentPage>

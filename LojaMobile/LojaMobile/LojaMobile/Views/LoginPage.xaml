@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.Views.LoginPage"
+             BackgroundColor="{StaticResource corFundo}">
+  <StackLayout VerticalOptions="Center">
+    <Image>
+      <Image.Source>
+        <OnPlatform x:TypeArguments="ImageSource" 
+                    Android="icon.png"
+                    iOS="Icon-76.png"
+                    WinPhone="Assets/SmallLogo.png"></OnPlatform>
+      </Image.Source>
+    </Image>
+    <Entry Placeholder="Usuário" 
+           Text="{Binding Nome}"/>
+    <Entry Placeholder="Senha" 
+           Text="{Binding Senha}" 
+           IsPassword="True"/>
+    <Button Text="Entrar" 
+            Command="{Binding Logar}"/>
+    <Label Text="Cadastre-se" HorizontalTextAlignment="Center">
+      <Label.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding Cadastrar}"/>
+      </Label.GestureRecognizers>
+    </Label>
+  </StackLayout>
+</ContentPage>

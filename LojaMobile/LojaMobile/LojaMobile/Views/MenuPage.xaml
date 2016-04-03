@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LojaMobile.Views.MenuPage"
+             BackgroundColor="{StaticResource corFundo}">
+  <MasterDetailPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
+  </MasterDetailPage.Padding>
+  
+  <MasterDetailPage.Master>
+  </MasterDetailPage.Master>
+  
+  <MasterDetailPage.Detail>
+  </MasterDetailPage.Detail>
+  
+</MasterDetailPage>
